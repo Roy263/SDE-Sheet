@@ -1,3 +1,5 @@
+# Equilibrium Point in an array is a position such that
+# the sum of elements before it is equal to the sum of elements after it.
 class Solution:
     def equalsum(self,arr):
         n=len(arr)-1
