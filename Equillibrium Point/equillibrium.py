@@ -11,6 +11,6 @@ class Solution:
         return -1
 
 if __name__=='__main__':
-    arr=[1,4,2,5]
+    arr=[1,3,5,2,2]
     obj=Solution()
     print(obj.equalsum(arr))
