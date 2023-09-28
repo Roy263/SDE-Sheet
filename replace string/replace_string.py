@@ -1,13 +1,15 @@
 class Solution():
     def replace_string(self,input_string,input_replacements):
-        print(len(input_string))
-        output_string=input_string
+        output_string=list(input_string)
+        offset=0
         for replacement in input_replacements:
-            index,before,after=replacement.values()
-            print(f"{index} {before} {after}")
-            output_string=input_string[:index]+after+output_string[index+len(before):]
             print(output_string)
-        return output_string
+            index,before,after=replacement.values()
+            if(input_string[index:index+len(before)]==before):
+                index+=offset
+                output_string[index:index+len(before)]=list(after)
+                offset+=len(after)-len(before)
+        return ''.join(output_string)
 
 
 if __name__=="__main__":
